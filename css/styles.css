@@ -847,7 +847,10 @@ p {
 }
 .form-input:focus ~ .form-label {
 	color: var(--accent-color);
-	transform: translate(-18px, -30px);
+	transform: translate(-20px, -30px);
+}
+.form-taxtarea:focus ~ .form-label {
+	transform: translateY(-30px);
 }
 .icon-input {
 	position: absolute;
