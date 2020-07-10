@@ -69,15 +69,13 @@
 						для вашего бизнеса
 					</h1>
 
-					<div class="hero-button-box">
-						<button class="hero-button" href="" data-modal-open>Заказать услугу</button>
-					</div>
+					<button class="hero-button" href="" data-modal-open>Заказать услугу</button>
 				</div>
 			</section>
 			<!-- Преимущества компании -->
 			<section class="section-benefits">
 				<div class="container">
-					<h2 class="section-title benefits-title">Преимущества</h2>
+					<h2 class="section-title visually-hidden">Преимущества</h2>
 					<ul class="benefits-list">
 						<li class="benefits-list-item">
 							<div class="benefits-icon-box">
@@ -367,7 +365,7 @@
 					</div>
 
 					<div class="footer-social-conteiner">
-						<h3 class="footer-social-title">присоединяйтесь</h3>
+						<b class="footer-social-title">присоединяйтесь</b>
 						<ul class="footer-list-socials">
 							<li class="footer-socials-item">
 								<a class="footer-socials-link" href="https://www.instagram.com/">
@@ -400,10 +398,10 @@
 						</ul>
 					</div>
 					<div class="subscribe-conteiner">
-						<h3 class="footer-social-title">Подпишитесь на рассылку</h3>
+						<b class="footer-social-title">Подпишитесь на рассылку</b>
 						<form class="subscribe-form" action="">
 							<label for="">
-								<input class="subscribe-imput" type="email" name="email" value="E-mail" />
+								<input class="subscribe-imput" type="email" name="email" placeholder="E-mail" />
 							</label>
 							<button class="footer-button">
 								Подписаться
@@ -421,7 +419,59 @@
 			<!-- Модальное окно -->
 			<div class="backdrop is-hidden" data-modal>
 				<div class="modal">
-					<button data-modal-close>Close</button>
+					<button class="close-button" data-modal-close>
+						<svg class="icon-modal-close" width="12" height="12">
+							<use href="./images/sprite.svg#icon-close-2"></use>
+						</svg>
+					</button>
+					<b class="modal-call">Оставьте свои данные, мы вам перезвоним</b>
+					<form autocomplete="off" class="modal-form">
+						<div class="form-wrapper">
+							<input class="form-input" type="text" name="name" />
+							<label class="form-label" for="name">Имя</label>
+							<svg class="icon-input" width="12" height="12">
+								<use href="./images/sprite.svg#icon-person-2"></use>
+							</svg>
+						</div>
+
+						<div class="form-wrapper">
+							<input class="form-input" type="tel" name="tel" />
+							<label class="form-label" for="tel">Телефон</label>
+							<svg class="icon-input" width="13" height="13">
+								<use href="./images/sprite.svg#icon-phone-2"></use>
+							</svg>
+						</div>
+
+						<div class="form-wrapper">
+							<input class="form-input" type="mail" name="mail" />
+							<label class="form-label" for="mail">Почта</label>
+							<svg class="icon-input" width="12" height="15">
+								<use href="./images/sprite.svg#icon-email-2"></use>
+							</svg>
+						</div>
+						<div class="form-wrapper">
+							<textarea class="form-taxtarea" name="comment" id="comment"></textarea>
+							<label class="form-label" for="comment">Коментарий</label>
+						</div>
+						<div class="form-wrapper">
+							<label class="checkbox-field" for="subscribe">
+								<input
+									class="checkbox visually-hidden"
+									id="subscribe"
+									name="subscribe"
+									type="checkbox"
+									value="subscribe"
+								/>
+
+								<span class="subscribe-label">
+									Соглашаюсь с рассылкой и принимаю
+									<a class="agreement-link" href="">Условия договора</a>
+								</span>
+							</label>
+						</div>
+
+						<button class="hero-button modal-button" type="submit">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</footer>
