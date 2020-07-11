@@ -760,7 +760,7 @@ p {
 	background-color: rgba(0, 0, 0, 0.2);
 	z-index: 2;
 
-	transition: opacity var(--duration) var(--timing-function), transform var(--duration) var(--timing-function);
+	transition: all var(--duration) var(--timing-function);
 }
 .backdrop.is-hidden {
 	opacity: 0;
@@ -841,11 +841,13 @@ p {
 }
 .form-label {
 	position: absolute;
+
 	left: 42px;
 	top: 12px;
+
 	transition: transform var(--duration) var(--timing-function);
 }
-.form-input:focus ~ .form-label {
+.form-input:focus + .form-label {
 	color: var(--accent-color);
 	transform: translate(-20px, -30px);
 }
